@@ -1,0 +1,16 @@
+<h2>{{ titulo }}</h2>
+<form action="{% url 'calculadora:enviar' %}" method="post">
+    {% csrf_token %} 
+    Número 01:
+    <input type="number" name="value01"><br>
+    Número 02:
+    <input type="number" name="value02"><br>
+
+    Operación:<br>
+    <input type="radio" name="operacion" value="suma">Suma</input><br>
+    <input type="radio" name="operacion" value="resta">Resta</input><br>
+    <input type="radio" name="operacion" value="multiplicación">Multiplicación</input><br>
+
+    <!-- Boton de enviar -->
+    <input type="submit" name="submit" value="Enviar">
+</form>
