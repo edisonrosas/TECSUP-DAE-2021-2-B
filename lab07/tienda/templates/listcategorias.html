@@ -1,0 +1,5 @@
+{% block categories %} 
+        {% for category in category_list %}
+            <a href="/tienda/categoria/{{category.nombre}}/" class="list-group-item">{{category.nombre}}</a>
+        {% endfor %}
+{% endblock %}
